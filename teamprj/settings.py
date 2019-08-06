@@ -20,6 +20,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'drink.apps.DrinkConfig',
     'blogapp.apps.BlogappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
