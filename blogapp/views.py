@@ -7,15 +7,13 @@ from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
-def home(request):
-    blogapps = Blogapp.objects # 쿼리셋( 블로그 객체 목록 = 메소드 ) 전달 
-    return render(request, 'home.html', {'blogs' : blogs})
+def home(request):  # 쿼리셋( 블로그 객체 목록 = 메소드 ) 전달 
+    return render(request, 'home.html')
 
     # 쿼리셋 표현
     # 모델.쿼리셋(object)
-def detail(request, blogapp_id):
-    blogapp_detail = get_object_or_404(Blogapp, pk=blogapp_id)
-    return render(request, 'detail.html', {'blogapp' : blogapp_detail})
+def detail(request):
+    return render(request, 'detail.html')
 
 def new(request):
     return render(request, 'new.html')
